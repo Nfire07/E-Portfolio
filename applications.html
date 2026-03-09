@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<title>E-Portfolio</title>
+<style>
+:root {
+  --main-bg: #191919;
+  --sector-color: #2b2b2b;
+  --accent-color: #ffffff26;
+  --accent-hover: #ffffff40;
+  --text-primary: #cdcdcd;
+  --text-secondary: #646464;
+  --text-paragraph: #afafaf;
+  --text-light: #d0d0d0;
+  --text-hover: #fefefe;
+  --button-border: #ffffff4d;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --grid-size: 40px;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg);
+  background-image: linear-gradient(to right, var(--sector-color) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--sector-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  scroll-behavior: smooth;
+  color: var(--text-paragraph);
+}
+
+h1 {
+  color: var(--text-primary);
+  text-align: center;
+  margin: 40px 0;
+}
+
+.application-table {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--accent-color), #ffffff0d);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px var(--shadow);
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.application-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.application-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.application-description h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.application-description p {
+  margin: 0;
+  color: var(--text-paragraph);
+}
+
+.application-description a {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--button-border);
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-color), #ffffff0d);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-decoration: none;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.application-description a:hover {
+  background: linear-gradient(135deg, var(--accent-hover), #ffffff1a);
+  color: var(--text-hover);
+}
+
+@media (max-width: 768px) {
+  .application-table {
+    grid-template-columns: 60px 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-table {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .application-description {
+    margin-top: 10px;
+    align-items: center;
+  }
+}
+
+a, button {
+      padding: 10px 15px;
+      border: 1px solid var(--button-border);
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-color), #ffffff0d);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 30px var(--shadow);
+      text-decoration: none;
+      color: var(--text-light);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    a:hover, button:hover {
+      background: linear-gradient(135deg, var(--accent-hover), #ffffff1a);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+      color: var(--text-hover);
+    }
+</style>
+</head>
+<body>
+<h1>My Applications</h1>
+
+<div class="application-table">
+  <div class="application-icon">
+    <img src="./images/ic_launcher.png" alt="NPlayer Icon">
+  </div>
+  <div class="application-description">
+    <h3>NPlayer</h3>
+    <p style="text-align: justify;">A simple mp3 player with foreground service and mp3 media manipulation features.</p>
+    <a href="https://github.com/Nfire07/NPlayer/releases/tag/NPlayer" target="_blank">Check the download page</a>
+  </div>
+</div>
+
+<a href="index.html" style="display:flex;align-items:center;justify-content:center;gap:8px;margin:40px auto 20px auto;width:fit-content;padding:10px 15px;border:1px solid var(--button-border);border-radius:12px;background:linear-gradient(135deg,var(--accent-color),#ffffff0d);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 30px var(--shadow);text-decoration:none;color:var(--text-light);transition:all 0.3s ease;">
+<img src="icons/arrow-down.svg" style="transform:rotate(90deg);" alt="arrow-down"> Return to the presentation page
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
